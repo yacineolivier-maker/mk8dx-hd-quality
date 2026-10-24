@@ -37,6 +37,20 @@ Shadow maps at 4096 are not offered: the game's graphics heap runs out when a ra
 - Not yet tested on 3.0.x nor on console hardware (higher GPU cost: expect lower frame rates in
   split screen on the Switch).
 
+## Notes for modders
+
+- The parameters edited are `depth_shadow_tex_width` / `depth_shadow_tex_height`, `ssao_width_scale` and
+  `cube_map_max_tex_width`, in the 8 scene objects of `gsys.bgmsconf` (race, menus, cutscenes...).
+- AAMP values are shared between parameters (the same 1024 is also used by unrelated entries such as model
+  counts), so the script appends a new value instead of editing the shared one in place.
+- In split screen each view gets a shadow map scaled by its share of the 1280x720 virtual screen (floor 32),
+  so 2-player split screen is the most demanding case.
+- If the files of your version differ, the script stops with "no parameter changed" and writes nothing.
+
+Reports for 3.0.x (works / crashes, docked or handheld) are welcome in the issues.
+
+Written with AI assistance (Claude). Not affiliated with Nintendo.
+
 ## License
 
 MIT.
