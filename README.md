@@ -47,6 +47,9 @@ Shadow maps at 4096 are not offered: the game's graphics heap runs out when a ra
   so 2-player split screen is the most demanding case.
 - If the files of your version differ, the script stops with "no parameter changed" and writes nothing.
 
+More 1.0.0 findings (ultra-wide table, virtual screen constants, UI layout size) are in
+[docs/RESEARCH_NOTES_1.0.0.md](docs/RESEARCH_NOTES_1.0.0.md).
+
 Reports for 3.0.x (works / crashes, docked or handheld) are welcome in the issues.
 
 Written with AI assistance (Claude). Not affiliated with Nintendo.
